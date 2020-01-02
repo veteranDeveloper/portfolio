@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>veteran Portfolio</title>
+
+
+
+<style>
+ span{color: red;}
+  body{ background-image:url(./images/123.jpg)  }
+* {
+  box-sizing: content-box;
+}
+
+body {
+  background-color: #474e5d;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-style: italic;
+
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline {
+  position: relative;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* The actual timeline (the vertical ruler) */
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  background-color:yellow;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+/* Container around content */
+.container {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+}
+
+/* The circles on the timeline */
+.container::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -13px;
+  background-color: black;
+  border: 6px solid #FF9F55;
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Place the container to the left */
+.left {
+  left: -50%;
+}
+
+/* Place the container to the right */
+.right {
+  left: 50%;
+}
+
+/* Add arrows to the left container (pointing right) */
+.left::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  right: 30px;
+  border: medium solid white;
+  border-width: 10px 0 10px 10px;
+  border-color: transparent transparent transparent white;
+}
+
+/* Add arrows to the right container (pointing left) */
+.right::before {
+  content: " ";
+  height: 0;
+  position: absolute;
+  top: 22px;
+  width: 0;
+  z-index: 1;
+  left: 30px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+}
+
+/* Fix the circle for containers on the right side */
+.right::after {
+  left: -11px;
+}
+
+/* The actual content */
+.content {
+  padding: 20px 30px;
+  background-color: violet;
+  position: relative;
+  border-radius: 6px
+
+}
+
+/* Media queries - Responsive timeline on screens less than 600px wide */
+@media screen and (max-width: 600px) {
+  /* Place the timelime to the left */
+  .timeline::after {
+  left: 31px;
+  }
+  
+  /* Full-width containers */
+  .container {
+  width: 100%;
+  padding-left: 70px;
+  padding-right: 25px;
+  }
+  
+  /* Make sure that all arrows are pointing leftwards */
+  .container::before {
+  left: 60px;
+  border: medium solid white;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent white transparent transparent;
+  }
+
+  /* Make sure all circles are at the same spot */
+  .left::after, .right::after {
+  left: 15px;
+  }
+  
+  /* Make all right containers behave like the left ones */
+  .right {
+  left: 0%;
+  }
+}
+</style>
+
+
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="style.css">
+ 
+</head>
+<body>
+
+
+
+<div class="jumbotron text-center" style="margin-bottom:0">
+
+
+  <h1 class="animated  bounceInLeft slower"> Veteran Developer</h1>
+  <h2 class="animated heartBeat slow"><span>PORTFOLIO</span></h2>
+</div>
+
+
+
+<nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+  <!-- Brand/logo -->
+  <a class="navbar-brand" href="#">
+    <img src="pic.jpg"style="width:40px;">
+  </a>
+  
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link" href="#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href=" mailto:nikhildalakoti05@gmail.com">email </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">About </a>
+       <li class="nav-item">
+      <a class="nav-link" href="#">Contact us: 9650746372</a>
+       <li class="nav-item">
+      <a class="nav-link" href="https://www.google.com/maps/place/28%C2%B027'00.6%22N+77%C2%B000'32.3%22E/@28.4506122,77.0079487,17z/data=!4m6!3m5!1s0x390d1789c09af415:0x3bc510a1c3b68781!7e2!8m2!3d28.4501562!4d77.0089835"  target= "_blank">Address</a>
+
+
+
+
+      <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       <strong>More</strong> 
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">PROJECT </a>
+        <a class="dropdown-item" href="#">CONTRIBUTION</a>
+        <a class="dropdown-item" href="#"> STORY</a> </div>
+   
+  </ul>
+ 
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+  <form class="form-inline" action="https://google.com">
+     
+    <input class="form-control mr-lg-5" type="text" placeholder="Search">
+    <button class="btn btn-success" type="submit" target= "_blank">Search</button>
+  </form>
+</nav>
+
+</nav>
+
+
+ 
+
+<div class="timeline">
+  <div class="container left">
+    <div class="content">
+      <h2>2001</h2>
+      <p>Born in<strong> Gurgaon</strong>,Haryana
+      </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2004</h2>
+      <p>Started studying<br>
+        Went to <strong>Sharda international School,gurgaon</strong>
+       </p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2017</h2>
+      <p>Passed <em>10th (CBSE)</em><br>
+          Got<strong> 9 CGPA </strong> </p>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="content">
+      <h2>2019</h2>
+      <p>Passed <em>12th(CBSE)</em><br>
+          got<strong> 94.5% </strong></p>
+    </div>
+  </div>
+  <div class="container left">
+    <div class="content">
+      <h2>2019</h2>
+      <h3>  Started college life </h3>
+      <ul>
+      <li> Took admission in <strong>Deshbandhu college</strong> for Eco.(hons)</li>
+        <li> Left Deshbandhu college</li>
+        <li>currently studying at<strong> Motilal Nehru college</strong>  as<em> B.com (hons)</em> </li>
+      </ul>
+              
+  </div>
+  
+</div>
+
+
+
+
+</body>
+</html>
